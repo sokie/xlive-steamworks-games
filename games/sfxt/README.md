@@ -58,3 +58,5 @@ the SDK's probe (build with `-DXLS_BUILD_TESTS=ON`).
   Steam.
 - The Home key opens whatever Steam does for `ActivateGameOverlay`: the in-game overlay when it is
   enabled in Steam's settings, or the steam client.
+- Steam lists no achievements for the app yet, so unlocks are recorded in the local folder of the
+  wrapper until the game devs adds them.
