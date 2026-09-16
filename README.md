@@ -35,7 +35,7 @@ and a README that says what to copy where.
 
 | Title | Folder | Variants |
 | --- | --- | --- |
-| Street Fighter X Tekken | `games/sfxt` | `sfxt-gfwl` (GFWL build: SDK dll + the 1.65 steam_api.dll), `sfxt-steam` (Steam build: adds the `steam_api.dll` shim that gives the 2012 exe its SDK 1.19 exports over the 1.65 dll) |
+| Street Fighter X Tekken | `games/sfxt` | `sfxt-gfwl` (GFWL build: SDK dll + the 1.65 steam_api.dll), `sfxt-steam` (Steam build: adds the `steam_api.dll` shim that gives the 2012 exe its SDK 1.19 exports over the 1.65 dll). |
 
 ## Adding a title
 
