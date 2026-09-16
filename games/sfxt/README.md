@@ -16,17 +16,17 @@ build only uses its own `steam_api.dll` for the language, DLC ownership and the 
 2. Copy everything from the release folder next to `SFTK.exe`.
 3. Start the game from Steam, or with Steam running.
 
-The Steam build's `steam_api.dll` here is a shim: it gives the 2012 exe the SDK 1.19 entry points it
-imports (`SteamAPI_Init`, `SteamApps`, `SteamFriends` and their vtables) and forwards every other
-call to `steam_api_real.dll`, which is Valve's SDK 1.65 dll renamed. Both files must stay together.
+The Steam build's `steam_api.dll` here is a shim: the 2012 exe needs the SDK 1.19 entry points
+(`SteamAPI_Init`, `SteamApps`, `SteamFriends` and their vtables) and forwards every other
+call to `steam_api_real.dll`, which is the latest SDK renamed. Both files must stay together.
 
 ## Files
 
 | File | What it is |
 | --- | --- |
 | `xlive.dll` | the xlive-steamworks SDK build |
-| `steam_api.dll` | GFWL folder: Valve's 1.65 dll. Steam folder: the shim |
-| `steam_api_real.dll` | Steam folder only: Valve's 1.65 dll under the name the shim forwards to |
+| `steam_api.dll` | GFWL folder: Valve's SDK redistributable. Steam folder: the shim |
+| `steam_api_real.dll` | Steam folder only: Valve's SDK redistributable under the name the shim forwards to |
 | `xlive_steamworks.json` | app id 209120, 50 achievements and 168 leaderboard views extracted from the game's SPA, unused for now |
 
 ## Notes
