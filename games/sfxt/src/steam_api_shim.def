@@ -1,0 +1,8 @@
+; SDK 1.19 entry points the exe imports, the forwarders to steam_api_real.dll are in steam_api_forwarders.h.
+LIBRARY steam_api
+EXPORTS
+	SteamAPI_Init = Shim_SteamAPI_Init
+	SteamAPI_InitSafe = Shim_SteamAPI_Init
+	SteamAPI_Shutdown = Shim_SteamAPI_Shutdown
+	SteamApps = Shim_SteamApps
+	SteamFriends = Shim_SteamFriends
