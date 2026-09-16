@@ -7,3 +7,4 @@
 # Windows scripts must be CRLF or cmd.exe mishandles labels.
 *.bat text eol=crlf
 *.cmd text eol=crlf
+games/*/kit/*.txt text eol=crlf

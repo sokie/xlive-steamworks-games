@@ -41,6 +41,11 @@ call to `steam_api_real.dll`, which is Valve's SDK 1.65 dll renamed. Both files 
 - The Steam build asks Steam only for DLC ownership (84 ids, 210030 to 210113) and the store page.
   It takes the language from `language.cfg` when that file exists.
 
+## Test kit for an owner
+
+`kit\make_owner_kit.ps1` packs `release\zips\sfxt-owner-kit.zip` from the two release folders and
+the SDK's probe (build with `-DXLS_BUILD_TESTS=ON`).
+
 ## Issues
 
 - **The in-game Store errors out and returns to the title screen.** On entering the main menu the

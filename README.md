@@ -35,7 +35,7 @@ and a README that says what to copy where.
 
 | Title | Folder | Variants |
 | --- | --- | --- |
-| Street Fighter X Tekken | `games/sfxt` | `sfxt-gfwl` (GFWL build: SDK dll + the 1.65 steam_api.dll), `sfxt-steam` (Steam build: adds the `steam_api.dll` shim that gives the 2012 exe its SDK 1.19 exports over the 1.65 dll) |
+| Street Fighter X Tekken | `games/sfxt` | `sfxt-gfwl` (GFWL build: SDK dll + the 1.65 steam_api.dll), `sfxt-steam` (Steam build: adds the `steam_api.dll` shim that gives the 2012 exe its SDK 1.19 exports over the 1.65 dll). `kit/` packs an owner test kit |
 
 ## Adding a title
 
@@ -45,6 +45,8 @@ and a README that says what to copy where.
    maps as the title's own SPA numbers them.
 3. `games/<title>/README.md`: the install steps for a player or a studio, it ships in the release.
 4. Add the folder to the root `CMakeLists.txt`.
+5. Optional `games/<title>/kit/`: scripts and a packer for a tester who owns the game, on the
+   pattern of `games/sfxt/kit`.
 
 ## License
 
