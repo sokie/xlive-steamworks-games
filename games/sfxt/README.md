@@ -54,3 +54,5 @@ the SDK's probe (build with `-DXLS_BUILD_TESTS=ON`).
   GFWL's servers used to serve, and no copy of it is known to exist. Without it the store has no
   catalogue. The DLC itself is unaffected, its ownership comes from Steam.
 - The Home key opens whatever Steam does for `ActivateGameOverlay`.
+- Steam lists no achievements for the app yet, so unlocks are recorded in the local folder of the
+  wrapper until the developer adds them.
