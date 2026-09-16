@@ -25,7 +25,7 @@ if(NOT EXISTS "${XLS_SDK_DIR}/CMakeLists.txt")
 endif()
 add_subdirectory("${XLS_SDK_DIR}" sdk)
 
-# The SDK exports STEAMWORKS_SDK_DIR to the cache, the 1.65 redistributable and headers come from it.
+# The SDK exports STEAMWORKS_SDK_DIR to the cache, the redistributable and headers come from it.
 set(XLS_STEAM_API_DLL "${STEAMWORKS_SDK_DIR}/redistributable_bin/steam_api.dll")
 set(XLS_STEAM_INCLUDE "${STEAMWORKS_SDK_DIR}/public")
 
@@ -47,3 +47,4 @@ function(xls_add_release name)
 endfunction()
 
 add_subdirectory(games/sfxt)
+add_subdirectory(games/lp2)
