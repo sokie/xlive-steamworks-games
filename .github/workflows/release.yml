@@ -14,7 +14,7 @@ jobs:
   build:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           submodules: recursive
           fetch-depth: 0
@@ -31,7 +31,7 @@ jobs:
           $version = if ($env:GITHUB_REF_TYPE -eq "tag") { $env:GITHUB_REF_NAME } else { "" }
           powershell -NoProfile -File tools/make_release.ps1 -Version $version
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v5
         with:
           name: xlive-steamworks-games
           path: release/zips/*
