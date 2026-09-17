@@ -31,14 +31,7 @@ add_custom_command(TARGET sfxt_steam_api POST_BUILD
     VERBATIM
 )
 
-xls_add_release(sfxt-gfwl
-    FILES
-        "$<TARGET_FILE:xlive>"
-        "${XLS_STEAM_API_DLL}"
-        "${CMAKE_CURRENT_SOURCE_DIR}/xlive_steamworks.json"
-        "${CMAKE_CURRENT_SOURCE_DIR}/README.md"
-    DEPENDS xlive
-)
+xls_add_standard_release(sfxt)
 
 xls_add_release(sfxt-steam
     FILES
