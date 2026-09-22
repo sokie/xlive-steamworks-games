@@ -26,8 +26,7 @@ powershell -File tools/make_release.ps1
 
 `STEAMWORKS_SDK_DIR` points at an unpacked Steamworks SDK (the directory that holds `public/steam`
 and `redistributable_bin`). Without it the SDK's CMake fetches the rlabrecque mirror. The releases
-build against SDK 1.62. The wrapper ships its own `steam_api.dll` so the version does not have to
-match the client, and 1.62 latest SDK Proton 9 bridges, so we can use 1 build for win and linux. 
+build against SDK 1.62, which works on Proton also.
 `-DXLS_SDK_DIR=<path>` builds against another SDK checkout instead of the
 submodule, for work on both repositories at once.
 
@@ -44,17 +43,11 @@ git tag v0.2.0
 git push origin v0.2.0
 ```
 
-The workflow builds the standard setup once (the SDK `xlive.dll` plus the 1.62 `steam_api.dll`),
-assembles one release folder per game from its `xlive_steamworks.json` and README, builds the games
-that need more (the SFxT Steam build and its `steam_api.dll` shim), then zips each release folder,
-packs them all into `xlive-steamworks-games-<tag>.zip`, writes `SHA256SUMS.txt` and publishes the
-lot as the GitHub release for that tag. `tools/make_release.ps1` does the same packing locally.
-
 ## Titles
 
 | Title | Folder | Variants |
 | --- | --- | --- |
-| Street Fighter X Tekken | `games/sfxt` | `sfxt-gfwl` (GFWL build: SDK dll + the SDK steam_api.dll), `sfxt-steam` (Steam build: adds the `steam_api.dll` shim that gives the 2012 exe its SDK 1.19 exports over the SDK dll). |
+| Street Fighter X Tekken | `games/sfxt` | `sfxt-gfwl` (GFWL build: SDK dll + the SDK steam_api.dll), `sfxt-steam` (Steam build: adds the `steam_api.dll` wrapper for the game's own published steam_api). |
 | Lost Planet 2 | `games/lp2` | `lp2-gfwl` (GFWL build: SDK dll + the SDK steam_api.dll, the game ships no steam_api.dll of its own) |
 
 ## Adding a title
