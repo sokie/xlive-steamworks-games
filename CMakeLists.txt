@@ -48,14 +48,16 @@ function(xls_add_release name)
 endfunction()
 
 # xls_add_standard_release(<game>)
-# The basics most titles need: the SDK xlive.dll, the SDK steam_api.dll, the game's config and its
-# README, assembled as release/<game>-gfwl/.
+# The basics most titles need: the SDK xlive.dll, the SDK steam_api.dll, the game's config, its
+# README and any PowerShell script beside them, assembled as release/<game>-gfwl/.
 function(xls_add_standard_release game)
     set(dir "${XLS_GAMES_DIR}/${game}")
     set(files "$<TARGET_FILE:xlive>" "${XLS_STEAM_API_DLL}" "${dir}/xlive_steamworks.json")
     if(EXISTS "${dir}/README.md")
         list(APPEND files "${dir}/README.md")
     endif()
+    file(GLOB scripts CONFIGURE_DEPENDS "${dir}/*.ps1")
+    list(APPEND files ${scripts})
     xls_add_release(${game}-gfwl FILES ${files} DEPENDS xlive)
 endfunction()
 
