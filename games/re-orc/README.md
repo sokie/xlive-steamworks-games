@@ -6,12 +6,12 @@ carries the language, DLC ownership, the store page and the overlay.
 
 | File | Imports | Release folder |
 | --- | --- | --- |
-| `RaccoonCity.exe` | `xlive.dll` and a 2012 `steam_api.dll` | `orc-steam` |
+| `RaccoonCity.exe` | `xlive.dll` and a 2012 `steam_api.dll` | `re-orc-steam` |
 
 ## Install
 
 1. Back up the files `xlive.dll` and `steam_api.dll`.
-2. Copy everything from the `orc-steam` release folder next to `RaccoonCity.exe`.
+2. Copy everything from the `re-orc-steam` release folder next to `RaccoonCity.exe`.
 3. Start the game from Steam, or with Steam running.
 
 The release's `steam_api.dll` is a shim: the 2012 exe imports the SDK 1.13 entry points
