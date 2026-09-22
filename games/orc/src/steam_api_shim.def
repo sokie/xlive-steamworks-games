@@ -1,0 +1,10 @@
+; The entry points the RaccoonCity.exe imports. The forwarders to steam_api_real.dll are in
+; steam_api_forwarders.h, and they carry SteamAPI_RunCallbacks and everything xlive.dll needs.
+LIBRARY steam_api
+EXPORTS
+	SteamAPI_Init = Shim_SteamAPI_Init
+	SteamAPI_InitSafe = Shim_SteamAPI_Init
+	SteamAPI_Shutdown = Shim_SteamAPI_Shutdown
+	SteamApps = Shim_SteamApps
+	SteamFriends = Shim_SteamFriends
+	SteamUtils = Shim_SteamUtils
