@@ -1,0 +1,141 @@
+{
+    "log": {
+        "level": "info"
+    },
+    "steam": {
+        "app_id": 209100,
+        "required": true
+    },
+    "title": {
+        "title_id": 1128468385
+    },
+    "achievements": {
+        "name_format": "ACH_%u",
+        "map": {
+            "54": "ACH_54",
+            "55": "ACH_55",
+            "56": "ACH_56",
+            "57": "ACH_57",
+            "58": "ACH_58",
+            "59": "ACH_59",
+            "60": "ACH_60",
+            "61": "ACH_61",
+            "62": "ACH_62",
+            "64": "ACH_64",
+            "65": "ACH_65",
+            "66": "ACH_66",
+            "67": "ACH_67",
+            "68": "ACH_68",
+            "69": "ACH_69",
+            "70": "ACH_70",
+            "71": "ACH_71",
+            "72": "ACH_72",
+            "74": "ACH_74",
+            "75": "ACH_75",
+            "76": "ACH_76",
+            "77": "ACH_77",
+            "78": "ACH_78",
+            "79": "ACH_79",
+            "80": "ACH_80",
+            "81": "ACH_81",
+            "82": "ACH_82",
+            "83": "ACH_83",
+            "84": "ACH_84",
+            "85": "ACH_85",
+            "86": "ACH_86",
+            "87": "ACH_87",
+            "88": "ACH_88",
+            "89": "ACH_89",
+            "90": "ACH_90",
+            "91": "ACH_91",
+            "92": "ACH_92",
+            "93": "ACH_93",
+            "94": "ACH_94",
+            "95": "ACH_95",
+            "96": "ACH_96",
+            "97": "ACH_97",
+            "98": "ACH_98",
+            "99": "ACH_99",
+            "100": "ACH_100",
+            "101": "ACH_101",
+            "103": "ACH_103",
+            "104": "ACH_104",
+            "105": "ACH_105",
+            "106": "ACH_106"
+        }
+    },
+    "leaderboards": {
+        "name_format": "LB_%u",
+        "map": {
+            "63": {
+                "name": "LB_63",
+                "rating_column": 11,
+                "detail_columns": [
+                    78,
+                    35,
+                    39,
+                    38,
+                    27,
+                    36,
+                    50,
+                    51,
+                    52,
+                    53,
+                    54,
+                    55,
+                    56,
+                    57
+                ],
+                "keep_best": true,
+                "ascending": false,
+                "display_type": 1
+            },
+            "64": {
+                "name": "LB_64",
+                "rating_column": 41,
+                "detail_columns": [
+                    78,
+                    31,
+                    32,
+                    33,
+                    34
+                ],
+                "keep_best": true,
+                "ascending": false,
+                "display_type": 1
+            },
+            "65": {
+                "name": "LB_65",
+                "rating_column": 14,
+                "detail_columns": [
+                    78,
+                    28,
+                    29,
+                    30,
+                    58
+                ],
+                "keep_best": true,
+                "ascending": false,
+                "display_type": 1
+            },
+            "66": {
+                "name": "LB_66",
+                "rating_column": 59,
+                "detail_columns": [
+                    78,
+                    60,
+                    61,
+                    62,
+                    63,
+                    64,
+                    65,
+                    66,
+                    67
+                ],
+                "keep_best": true,
+                "ascending": false,
+                "display_type": 1
+            }
+        }
+    }
+}
