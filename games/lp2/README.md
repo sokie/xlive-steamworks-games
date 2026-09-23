@@ -17,6 +17,7 @@ co-op, ranked matches, friends, voice, stats and Cloud all run through `xlive.dl
 | `xlive.dll` | the xlive-steamworks SDK build |
 | `steam_api.dll` | Valve's Steamworks redistributable, which `xlive.dll` calls |
 | `xlive_steamworks.json` | app id 45750, title 0x43430808, 50 achievements and 62 leaderboard views mapped from the game's SPA |
+| `import-save.ps1` | imports existing saves to our steamworks wrapper, see Saves |
 
 ## Steam app id
 
@@ -24,6 +25,25 @@ The config uses app id 45750, Lost Planet 2 on Steam. `xlive.dll` starts Steam a
 overlay, friends and presence. This release is for owners of Lost Planet 2 on Steam: run the game with
 Steam running and signed in on the account that owns app 45750. If Steam cannot start the app the
 wrapper warns once and the game continues offline.
+
+## Saves
+
+The game keeps its saves in `Documents\CAPCOM\LOST PLANET 2\`, one folder per gamertag holding
+`Lostplanet2.Lostplanet2Save-capcom`, next to the shared `config.ini`. Under this wrapper the gamertag is
+your Steam name (cut to 15 characters, anything outside ASCII becomes `_`), so by default the game starts with an
+empty save in a new folder.
+
+To carry a save over from another profile, run `import-save.ps1` from a PowerShell prompt in the game
+folder:
+
+```
+powershell -ExecutionPolicy Bypass -File import-save.ps1
+```
+
+It lists the profiles that have a save, copies the one you pick into your Steam profile's folder and
+leaves the original in place. Pass `-Gamertag <name>` if the folder the game
+created for you is named differently. Saves made under GFWL itself carry a header encrypted to that Live
+account and cannot be imported.
 
 ## Notes
 

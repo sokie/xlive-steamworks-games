@@ -28,6 +28,24 @@ call to `steam_api_real.dll`, which is the latest SDK renamed. Both files must s
 | `steam_api.dll` | GFWL folder: Valve's SDK redistributable. Steam folder: the shim |
 | `steam_api_real.dll` | Steam folder only: Valve's SDK redistributable under the name the shim forwards to |
 | `xlive_steamworks.json` | app id 209120, 50 achievements and 168 leaderboard views extracted from the game's SPA, unused for now |
+| `import-save.ps1` | imports existing saves to our steamworks wrapper, see Saves |
+
+## Saves
+
+The game keeps its saves in `Documents\CAPCOM\SFTK\savedata\`, one folder per profile named after the
+profile's XUID, next to the shared `config.ini`. Under this wrapper the XUID comes from your Steam account,
+so the game starts with an empty folder.
+
+To carry the save data of another profile over, run `import-save.ps1` from a PowerShell prompt in the game
+folder:
+
+```
+powershell -ExecutionPolicy Bypass -File import-save.ps1
+```
+
+It lists the profiles that have save data, copies the whole folder of the one you pick into your Steam
+profile's folder and leaves the original in place. It does nothing when your folder already holds files. A
+save made under GFWL itself carries a token encrypted to that Live account and may not load.
 
 ## Notes
 

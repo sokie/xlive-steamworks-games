@@ -27,6 +27,23 @@ files must stay together.
 | `steam_api.dll` | the shim |
 | `steam_api_real.dll` | Valve's SDK redistributable under the name the shim forwards to |
 | `xlive_steamworks.json` | app id 209100, title id 0x43430fa1, 50 achievements from the game's SPA |
+| `import-save.ps1` | imports existing saves to our steamworks wrapper, see Saves |
+
+## Saves
+
+The game keeps its saves in `Documents\CAPCOM\RERC\`, one file per profile named after the profile's XUID,
+next to the shared `settings.dat`. With the wrapper the XUID comes from your Steam account, so the game
+starts with an empty save.
+
+To carry the save of another profile over, run `import-save.ps1` from a PowerShell prompt in the game
+folder:
+
+```
+powershell -ExecutionPolicy Bypass -File import-save.ps1
+```
+
+It will list the saves it finds, copies the one you pick to the new name and leaves the original in place. 
+A save made under GFWL itself carries a token encrypted to that Live account and may not load.
 
 ## Notes
 

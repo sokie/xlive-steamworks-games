@@ -40,5 +40,6 @@ xls_add_release(sfxt-steam
         "${sfxt_steam_api_real}"
         "${CMAKE_CURRENT_SOURCE_DIR}/xlive_steamworks.json"
         "${CMAKE_CURRENT_SOURCE_DIR}/README.md"
+        "${CMAKE_CURRENT_SOURCE_DIR}/import-save.ps1"
     DEPENDS xlive sfxt_steam_api
 )

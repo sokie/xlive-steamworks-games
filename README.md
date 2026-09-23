@@ -47,9 +47,9 @@ git push origin v0.2.0
 
 | Title | Folder | Variants |
 | --- | --- | --- |
-| Street Fighter X Tekken | `games/sfxt` | `sfxt-gfwl` (GFWL build: SDK dll + the SDK steam_api.dll), `sfxt-steam` (Steam build: adds the `steam_api.dll` wrapper for the game's own published steam_api). |
-| Lost Planet 2 | `games/lp2` | `lp2-gfwl` (GFWL build: SDK dll + the SDK steam_api.dll, the game ships no steam_api.dll of its own) |
-| Resident Evil: Operation Raccoon City | `games/re-orc` | `re-orc-gfwl` (GFWL build: SDK dll + the SDK steam_api.dll), `re-orc-steam` (Steam build: adds the `steam_api.dll` shim for the game's own 2012 steam_api). |
+| Street Fighter X Tekken | `games/sfxt` | `sfxt-gfwl` (GFWL build: SDK dll + the SDK steam_api.dll), `sfxt-steam` (Steam build: adds the `steam_api.dll` wrapper for the game's own published steam_api), both with a save import script. |
+| Lost Planet 2 | `games/lp2` | `lp2-gfwl` (GFWL build: SDK dll + the SDK steam_api.dll, the game ships no steam_api.dll of its own, plus a save import script) |
+| Resident Evil: Operation Raccoon City | `games/re-orc` | `re-orc-gfwl` (GFWL build: SDK dll + the SDK steam_api.dll), `re-orc-steam` (Steam build: adds the `steam_api.dll` shim for the game's own 2012 steam_api), both with a save import script. |
 | Virtua Tennis 4 | `games/vt4` | `vt4-gfwl` (GFWL build: SDK dll + the SDK steam_api.dll, the game ships no steam_api.dll of its own, plus a save import script) |
 
 ## Adding a title

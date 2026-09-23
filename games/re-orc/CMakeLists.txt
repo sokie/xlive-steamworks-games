@@ -41,5 +41,6 @@ xls_add_release(re-orc-steam
         "${re_orc_steam_api_real}"
         "${CMAKE_CURRENT_SOURCE_DIR}/xlive_steamworks.json"
         "${CMAKE_CURRENT_SOURCE_DIR}/README.md"
+        "${CMAKE_CURRENT_SOURCE_DIR}/import-save.ps1"
     DEPENDS xlive re_orc_steam_api
 )

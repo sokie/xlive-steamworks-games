@@ -17,7 +17,7 @@ Virtua Tennis 4 is a plain Games for Windows LIVE title. `VT4.exe` imports `xliv
 | `xlive.dll` | the xlive-steamworks SDK build |
 | `steam_api.dll` | Valve's Steamworks redistributable, which `xlive.dll` calls |
 | `xlive_steamworks.json` | app id 71390, title 0x53450FA2, 48 achievements and 7 ranking leaderboards mapped from the game's SPA |
-| `import-save.ps1` | copies an existing save to the file name your Steam profile uses, see Saves |
+| `import-save.ps1` | imports existing saves to our steamworks wrapper, see Saves |
 
 ## Steam app id
 
